@@ -1,0 +1,31 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
+   http://www.liquibase.org/xml/ns/dbchangelog
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet author="ducdo" id="20222105-0834-001">
+        <createTable tableName="taco">
+            <column name="id" type="integer not null auto_increment">
+                <constraints primaryKey="true" primaryKeyName="pk_ingredient_id"/>
+            </column>
+            <column name="name" type="varchar(50)"/>
+            <column name="date_time" type="date"/>
+        </createTable>
+
+        <createTable tableName="taco_ingredients">
+            <column name="id" type="integer not null auto_increment">
+                <constraints primaryKey="true" primaryKeyName="pk_ingredient_id"/>
+            </column>
+            <column name="ingredients_id" type="int">
+                <constraints foreignKeyName="ingredients_id" referencedColumnNames="id" referencedTableName="ingredient"/>
+            </column>
+            <column name="taco_id" type="int">
+                <constraints foreignKeyName="taco_id" referencedColumnNames="id" referencedTableName="taco"/>
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
