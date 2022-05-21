@@ -21,10 +21,10 @@
                 <constraints primaryKey="true" primaryKeyName="pk_ingredient_id"/>
             </column>
             <column name="ingredients_id" type="int">
-                <constraints foreignKeyName="ingredients_id" referencedColumnNames="id" referencedTableName="ingredient"/>
+                <constraints foreignKeyName="ingredients_id_frK" referencedColumnNames="id" referencedTableName="ingredient"/>
             </column>
             <column name="taco_id" type="int">
-                <constraints foreignKeyName="taco_id" referencedColumnNames="id" referencedTableName="taco"/>
+                <constraints foreignKeyName="taco_id_frk" referencedColumnNames="id" referencedTableName="taco"/>
             </column>
         </createTable>
     </changeSet>
