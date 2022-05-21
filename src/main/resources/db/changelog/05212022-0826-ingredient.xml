@@ -14,7 +14,7 @@
             </column>
             <column name="code" type="varchar(50)"/>
             <column name="name" type="varchar(50)"/>
-            <column name="type" type="integer"/>
+            <column name="type" type="varchar(50)"/>
         </createTable>
     </changeSet>
 </databaseChangeLog>
